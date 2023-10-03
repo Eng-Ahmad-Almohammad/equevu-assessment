@@ -6,7 +6,6 @@ bandit==1.7.5
 black==23.9.1
 click==8.1.7
 coverage==7.3.1
-darglint==1.8.1
 django-debug-toolbar==4.2.0
 docutils==0.20.1
 eradicate==2.3.0

@@ -1,0 +1,14 @@
+echo "*****RUNNING Black LINTER*****"
+black .
+
+echo "*****RUNNING Isort LINTER*****"
+isort .
+
+echo "*****RUNNING FLAKE LINTER*****"
+if flake8 .
+then
+  echo "*****DONE SUCCESSFULLY*****"
+else
+  echo "*****NOT DONE SUCCESSFULLY*****"
+  exit 1
+fi

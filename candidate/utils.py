@@ -1,15 +1,15 @@
 """Modula that has some helper functions."""
 
 
-def resume_upload_path(instance, filename: str) -> str:
-    """Create a unique path for media based on the instance and filename.
+def resume_upload_path(instance, file_name: str) -> str:
+    """Create a unique path for media based on the instance and file_name.
 
     This function will a unique timestamp using the created time
     to create a unique path
 
     Args:
         instance (Candidate): Instance from Candidate that have been created.
-        filename (str): The name of the file that have been uploaded.
+        file_name (str): The name of the file that have been uploaded.
 
     Returns:
         str: a unique path for uploading the file.
@@ -20,4 +20,4 @@ def resume_upload_path(instance, filename: str) -> str:
     # We cannot use the id because it is None at this point
     created_date_str: str = instance.created_at.strftime("%Y_%m_%d_%H_%M_%S_%f")[:-3]
     # Build the dynamic upload path using the candidate's full_name
-    return "candidates/{0}-{1}/{2}".format(full_name, created_date_str, filename)
+    return "candidates/{0}-{1}/{2}".format(full_name, created_date_str, file_name)

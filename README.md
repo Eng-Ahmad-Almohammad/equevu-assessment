@@ -64,7 +64,7 @@ psql
 
 ### Run Django app:
 
-First of all create .env file on the top level of the directories tree and fill it as the .env.template
+Create .env file on the top level of the directories tree and fill it as the .env.template
 
 Collect the static files since we are using whitenose:
 

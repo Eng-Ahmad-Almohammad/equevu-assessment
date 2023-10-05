@@ -111,7 +111,6 @@ def test_unauthorized_download_request(api_client, candidate):
 @pytest.mark.django_db()
 def test_authorized_download_request(api_client, candidate):
     response = api_client.get(reverse("resume_details", args=["1"]), HTTP_X_ADMIN="1")
-    print(response.json())
     assert response.status_code == 200
     assert response.json()["resume"] == "http://testserver/media/{0}".format(
         resume_upload_path(candidate, "resume.pdf"),

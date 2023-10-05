@@ -64,6 +64,8 @@ psql
 
 ### Run Django app:
 
+First of all create .env file on the top level of the directories tree and fill it as the .env.template
+
 Collect the static files since we are using whitenose:
 
 ```bash
@@ -80,4 +82,19 @@ Run the server
 
 ```bash
 python manage.py runserver
+```
+
+## Run using Docker
+
+Download Docker from the following [link](https://www.docker.com/products/docker-desktop/) and docker-compose using the following command
+
+```bash
+sudo pip install docker-compose
+```
+
+Create .env file on the top level of the directories tree and fill it as the .env.template but use "postgres" as db name and user name and password since this is the default configuration for postgres image, make sure to use "db" as value of db host and "5432" as db port.
+
+After creating the .env file all what you need to do is to run:
+```bash
+docker-compose up --build
 ```

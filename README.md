@@ -98,3 +98,13 @@ After creating the .env file all what you need to do is to run:
 ```bash
 docker-compose up --build
 ```
+
+## Run Unit tests with coverage report
+
+Run the following command to run the unit tests
+
+```bash
+pytest
+```
+
+The previous command will run all the tests and will create htmlcov folder that will has index.htm file just preview it to check the coverage report.
